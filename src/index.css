@@ -61,11 +61,35 @@ body {
   font-family: var(--font-sans);
   color: #475569;
   background: #fff;
+  overflow-x: hidden;
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
+  background: linear-gradient(135deg, #2563eb, #0891b2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.section-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (min-width: 768px) {
+  .section-container {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-container {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
 }

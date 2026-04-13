@@ -71,7 +71,7 @@ export default function Pricing() {
               </ul>
 
               <Link
-                to="/dashboard"
+                to="/onboarding"
                 className={`mt-auto flex items-center justify-center gap-2 py-3.5 rounded-lg font-medium text-[15px] no-underline transition-colors ${
                   t.highlighted ? 'bg-white text-slate-900 hover:bg-slate-100' : 'bg-slate-900 text-white hover:bg-slate-800'
                 }`}

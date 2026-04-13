@@ -1,0 +1,36 @@
+export interface CatalogTool {
+  id: string
+  name: string
+  vendor: string
+  category: string
+  annualCost: number
+  riskReduction: number
+  complianceFrameworks: string[]
+  capabilities: string[]
+  description: string
+}
+
+export const toolCatalog: CatalogTool[] = [
+  { id: 'crowdstrike', name: 'CrowdStrike Falcon', vendor: 'CrowdStrike', category: 'Endpoint Detection & Response', annualCost: 180000, riskReduction: 18.5, complianceFrameworks: ['NIST', 'SOC 2', 'ISO 27001'], capabilities: ['EDR', 'Threat Intelligence', 'Malware Prevention', 'Device Control'], description: 'Cloud-native endpoint protection with AI-driven threat detection.' },
+  { id: 'cortex-xdr', name: 'Palo Alto Cortex XDR', vendor: 'Palo Alto', category: 'Extended Detection & Response', annualCost: 145000, riskReduction: 15.2, complianceFrameworks: ['NIST', 'SOC 2'], capabilities: ['XDR', 'EDR', 'Network Detection', 'Threat Intelligence'], description: 'Extended detection and response across endpoint, network, and cloud.' },
+  { id: 'splunk', name: 'Splunk Enterprise Security', vendor: 'Splunk', category: 'SIEM', annualCost: 220000, riskReduction: 14.8, complianceFrameworks: ['NIST', 'SOC 2', 'ISO 27001', 'HIPAA'], capabilities: ['SIEM', 'Log Management', 'Threat Detection', 'Incident Response'], description: 'Enterprise SIEM for security analytics and incident management.' },
+  { id: 'sentinel', name: 'Microsoft Sentinel', vendor: 'Microsoft', category: 'Cloud SIEM', annualCost: 95000, riskReduction: 11.3, complianceFrameworks: ['NIST', 'SOC 2', 'ISO 27001'], capabilities: ['SIEM', 'SOAR', 'Cloud Detection', 'Automated Response'], description: 'Cloud-native SIEM with built-in AI and SOAR capabilities.' },
+  { id: 'okta', name: 'Okta Identity Cloud', vendor: 'Okta', category: 'Identity & Access Management', annualCost: 120000, riskReduction: 16.7, complianceFrameworks: ['NIST', 'SOC 2', 'ISO 27001'], capabilities: ['SSO', 'MFA', 'Lifecycle Management', 'API Access Management'], description: 'Identity platform for workforce and customer identity.' },
+  { id: 'zscaler', name: 'Zscaler Internet Access', vendor: 'Zscaler', category: 'Secure Web Gateway', annualCost: 85000, riskReduction: 9.4, complianceFrameworks: ['NIST', 'SOC 2'], capabilities: ['SWG', 'URL Filtering', 'Cloud Firewall', 'DLP'], description: 'Cloud security for internet and SaaS access.' },
+  { id: 'tenable', name: 'Tenable.io', vendor: 'Tenable', category: 'Vulnerability Management', annualCost: 68000, riskReduction: 8.1, complianceFrameworks: ['NIST', 'PCI DSS'], capabilities: ['Vulnerability Scanning', 'Risk Assessment', 'Compliance Auditing', 'Web App Scanning'], description: 'Exposure management platform for vulnerability visibility.' },
+  { id: 'qualys', name: 'Qualys VMDR', vendor: 'Qualys', category: 'Vulnerability Management', annualCost: 55000, riskReduction: 7.2, complianceFrameworks: ['NIST', 'PCI DSS', 'ISO 27001'], capabilities: ['Vulnerability Scanning', 'Patch Management', 'Asset Inventory', 'Compliance Monitoring'], description: 'Unified vulnerability management, detection, and response.' },
+  { id: 'proofpoint', name: 'Proofpoint Email Security', vendor: 'Proofpoint', category: 'Email Security', annualCost: 72000, riskReduction: 12.3, complianceFrameworks: ['NIST', 'SOC 2'], capabilities: ['Email Filtering', 'Phishing Protection', 'DLP', 'Email Encryption'], description: 'Advanced threat protection for email communications.' },
+  { id: 'snyk', name: 'Snyk', vendor: 'Snyk', category: 'Application Security', annualCost: 45000, riskReduction: 6.8, complianceFrameworks: ['SOC 2'], capabilities: ['SCA', 'SAST', 'Container Security', 'IaC Security'], description: 'Developer-first security for code, dependencies, and containers.' },
+  { id: 'wiz', name: 'Wiz', vendor: 'Wiz', category: 'Cloud Security', annualCost: 110000, riskReduction: 13.1, complianceFrameworks: ['NIST', 'SOC 2', 'ISO 27001', 'CIS'], capabilities: ['CSPM', 'CWPP', 'CIEM', 'Vulnerability Management'], description: 'Agentless cloud security platform with full-stack visibility.' },
+  { id: 'vault', name: 'HashiCorp Vault', vendor: 'HashiCorp', category: 'Secrets Management', annualCost: 38000, riskReduction: 5.9, complianceFrameworks: ['NIST', 'SOC 2', 'PCI DSS'], capabilities: ['Secrets Management', 'Encryption', 'PKI', 'Dynamic Credentials'], description: 'Secrets lifecycle management and data encryption.' },
+  { id: 'datadog-sec', name: 'Datadog Security', vendor: 'Datadog', category: 'Cloud SIEM', annualCost: 88000, riskReduction: 10.2, complianceFrameworks: ['NIST', 'SOC 2'], capabilities: ['SIEM', 'Cloud Detection', 'Log Management', 'Threat Detection'], description: 'Security monitoring integrated with observability platform.' },
+  { id: 'sentinelone', name: 'SentinelOne Singularity', vendor: 'SentinelOne', category: 'Endpoint Detection & Response', annualCost: 160000, riskReduction: 17.1, complianceFrameworks: ['NIST', 'SOC 2', 'ISO 27001'], capabilities: ['EDR', 'Threat Intelligence', 'Malware Prevention', 'Automated Response'], description: 'Autonomous endpoint security with AI-powered prevention.' },
+  { id: 'cyberark', name: 'CyberArk Privilege Cloud', vendor: 'CyberArk', category: 'Privileged Access Management', annualCost: 130000, riskReduction: 14.5, complianceFrameworks: ['NIST', 'SOC 2', 'ISO 27001', 'PCI DSS'], capabilities: ['PAM', 'Session Recording', 'Credential Rotation', 'Just-in-Time Access'], description: 'SaaS-based privileged access management and credential security.' },
+  { id: 'cloudflare', name: 'Cloudflare One', vendor: 'Cloudflare', category: 'Network Security', annualCost: 75000, riskReduction: 8.8, complianceFrameworks: ['NIST', 'SOC 2'], capabilities: ['Zero Trust', 'CASB', 'SWG', 'DDoS Protection'], description: 'Unified SASE platform for zero trust network access.' },
+  { id: 'lacework', name: 'Lacework', vendor: 'Fortinet', category: 'Cloud Security', annualCost: 98000, riskReduction: 11.5, complianceFrameworks: ['NIST', 'SOC 2', 'CIS'], capabilities: ['CWPP', 'CSPM', 'Container Security', 'Anomaly Detection'], description: 'Data-driven cloud security for workload and configuration protection.' },
+  { id: 'veracode', name: 'Veracode', vendor: 'Veracode', category: 'Application Security', annualCost: 65000, riskReduction: 7.5, complianceFrameworks: ['NIST', 'SOC 2', 'PCI DSS'], capabilities: ['SAST', 'DAST', 'SCA', 'Penetration Testing'], description: 'Application security testing across the development lifecycle.' },
+  { id: 'mimecast', name: 'Mimecast', vendor: 'Mimecast', category: 'Email Security', annualCost: 58000, riskReduction: 10.8, complianceFrameworks: ['NIST', 'SOC 2'], capabilities: ['Email Filtering', 'Phishing Protection', 'Archiving', 'Continuity'], description: 'Email security with archiving and business continuity.' },
+  { id: 'rapid7', name: 'Rapid7 InsightVM', vendor: 'Rapid7', category: 'Vulnerability Management', annualCost: 62000, riskReduction: 7.8, complianceFrameworks: ['NIST', 'PCI DSS'], capabilities: ['Vulnerability Scanning', 'Risk Assessment', 'Remediation Tracking', 'Container Scanning'], description: 'Vulnerability risk management with live dashboards.' },
+]
+
+export const categories = [...new Set(toolCatalog.map(t => t.category))].sort()

@@ -23,7 +23,7 @@ export default function Footer() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link
-                to="/dashboard"
+                to="/onboarding"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-slate-900 font-medium rounded-lg no-underline hover:bg-slate-100 transition-colors text-[15px]"
               >
                 Open demo <ArrowRight className="w-4 h-4" />

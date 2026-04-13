@@ -41,8 +41,8 @@ export default function Navbar() {
             <Link to="/login" className="text-[13px] text-slate-500 hover:text-slate-900 no-underline px-3 py-2 transition-colors font-medium">
               Sign in
             </Link>
-            <Link to="/dashboard" className="text-[13px] font-medium text-white bg-slate-900 hover:bg-slate-800 px-4 py-2 rounded-lg no-underline transition-colors">
-              View demo
+            <Link to="/onboarding" className="text-[13px] font-medium text-white bg-slate-900 hover:bg-slate-800 px-4 py-2 rounded-lg no-underline transition-colors">
+              Try demo
             </Link>
           </div>
         </div>
@@ -74,7 +74,7 @@ export default function Navbar() {
           ))}
           <div className="pt-4 mt-2 border-t border-slate-100 space-y-2">
             <Link to="/login" className="block text-[15px] text-slate-700 no-underline py-2">Sign in</Link>
-            <Link to="/dashboard" className="block text-[15px] font-medium text-white bg-slate-900 text-center px-4 py-3 rounded-lg no-underline">View demo</Link>
+            <Link to="/onboarding" className="block text-[15px] font-medium text-white bg-slate-900 text-center px-4 py-3 rounded-lg no-underline">Try demo</Link>
           </div>
         </div>
       )}

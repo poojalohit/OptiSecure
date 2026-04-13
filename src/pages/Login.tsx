@@ -10,7 +10,7 @@ export default function Login() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    navigate('/dashboard')
+    navigate('/onboarding')
   }
 
   return (
@@ -28,8 +28,8 @@ export default function Login() {
             </div>
             <span className="text-2xl font-bold text-white">OptiSecure</span>
           </Link>
-          <h1 className="text-3xl font-extrabold text-white mt-4">Welcome back</h1>
-          <p className="text-brand-300 mt-2">Sign in to your security portfolio dashboard</p>
+          <h1 className="text-3xl font-extrabold text-white mt-4">Welcome</h1>
+          <p className="text-brand-300 mt-2">Sign in to manage your security portfolio</p>
         </div>
 
         <form onSubmit={handleSubmit} className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/10 shadow-2xl space-y-5">
@@ -57,53 +57,38 @@ export default function Login() {
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-brand-400 hover:text-white transition-colors"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-brand-400 hover:text-white transition-colors bg-transparent border-none cursor-pointer"
               >
                 {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
               </button>
             </div>
           </div>
 
-          <div className="flex items-center justify-between">
-            <label className="flex items-center gap-2 cursor-pointer">
-              <input type="checkbox" className="w-4 h-4 rounded border-white/20 bg-white/10 text-brand-500 focus:ring-brand-500" />
-              <span className="text-sm text-brand-300">Remember me</span>
-            </label>
-            <a href="#" className="text-sm text-brand-400 hover:text-brand-300 no-underline">Forgot password?</a>
-          </div>
-
           <button
             type="submit"
-            className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-brand-600 hover:bg-brand-500 text-white font-semibold rounded-xl transition-colors shadow-lg shadow-brand-600/25"
+            className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-brand-600 hover:bg-brand-500 text-white font-semibold rounded-xl transition-colors shadow-lg shadow-brand-600/25 cursor-pointer border-none"
           >
             Sign In <ArrowRight className="w-4 h-4" />
           </button>
 
-          <div className="relative my-6">
+          <div className="relative my-4">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-white/10" />
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-4 bg-transparent text-brand-400">or continue with demo</span>
+              <span className="px-4 text-brand-400">or try the demo</span>
             </div>
           </div>
 
           <button
             type="button"
-            onClick={() => navigate('/dashboard')}
-            className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounded-xl transition-colors border border-white/10"
+            onClick={() => navigate('/onboarding')}
+            className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounded-xl transition-colors border border-white/10 cursor-pointer"
           >
             <Shield className="w-4 h-4" />
-            Explore Demo Dashboard
+            Start with a demo account
           </button>
         </form>
-
-        <p className="text-center text-sm text-brand-400 mt-6">
-          Don't have an account?{' '}
-          <Link to="/dashboard" className="text-brand-300 hover:text-white no-underline font-medium">
-            Request a demo
-          </Link>
-        </p>
       </div>
     </div>
   )

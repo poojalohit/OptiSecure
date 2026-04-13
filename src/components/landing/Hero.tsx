@@ -26,7 +26,7 @@ export default function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-3 sm:gap-4">
               <Link
-                to="/dashboard"
+                to="/onboarding"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-medium rounded-lg no-underline transition-colors text-[15px]"
               >
                 Open product demo

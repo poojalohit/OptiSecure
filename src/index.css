@@ -43,7 +43,9 @@
   --color-slate-950: #020617;
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -57,12 +59,12 @@ html {
 
 body {
   font-family: var(--font-sans);
-  color: #334155;
+  color: #475569;
   background: #fff;
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #2563eb 0%, #0891b2 50%, #059669 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -32,17 +32,17 @@ export default function Pricing() {
   return (
     <section id="pricing" className="section-pad">
       <div className="page-shell">
-        <header className="max-w-[36rem] mx-auto text-center mb-14 lg:mb-20">
+        <header className="max-w-2xl mb-12 lg:mb-16">
           <p className="text-[13px] font-medium text-brand-600 tracking-wide uppercase mb-4">Pricing</p>
           <h2 className="text-2xl sm:text-3xl lg:text-[2rem] font-bold text-slate-900 tracking-tight mb-4">
             Annual plans by portfolio size
           </h2>
           <p className="text-[17px] text-slate-500 leading-relaxed">
-            Straightforward tiers. Add tools or services as you grow.
+            Straightforward pricing with room to scale by tools, simulations, and support level.
           </p>
         </header>
 
-        <div className="max-w-4xl mx-auto grid lg:grid-cols-3 gap-6 lg:gap-6 lg:items-stretch">
+        <div className="grid lg:grid-cols-3 gap-6 lg:gap-6 lg:items-stretch">
           {tiers.map((t) => (
             <div
               key={t.name}
@@ -82,7 +82,7 @@ export default function Pricing() {
           ))}
         </div>
 
-        <div className="max-w-3xl mx-auto mt-12 lg:mt-16 flex flex-wrap items-center justify-center gap-x-12 gap-y-6 text-center">
+        <div className="mt-12 lg:mt-16 flex flex-wrap items-center gap-x-12 gap-y-6">
           {[
             { l: 'Overage', v: '$300 / tool / year' },
             { l: 'MSSP', v: '$40K base + $2K / client' },

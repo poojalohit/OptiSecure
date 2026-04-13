@@ -1,27 +1,27 @@
 import { DollarSign, Layers, EyeOff, Megaphone } from 'lucide-react'
 
 const problems = [
-  { icon: DollarSign, title: 'Runaway spend', line: 'Millions on tools with fuzzy ROI.' },
-  { icon: Layers, title: 'Duplicate coverage', line: 'Dozens of products doing the same job.' },
-  { icon: EyeOff, title: 'No marginal view', line: 'Hard to show risk removed per dollar.' },
-  { icon: Megaphone, title: 'Vendor narratives', line: 'Budgets follow pitches, not models.' },
+  { icon: DollarSign, title: 'Runaway spend', line: 'Security programs often carry overlapping licenses year after year.' },
+  { icon: Layers, title: 'Duplicate coverage', line: 'Different tools cover the same controls with little incremental value.' },
+  { icon: EyeOff, title: 'Low visibility', line: 'Most teams cannot quantify risk reduced per additional dollar spent.' },
+  { icon: Megaphone, title: 'Vendor-led buying', line: 'Decisions are influenced by claims, not objective comparative models.' },
 ]
 
 export default function Problems() {
   return (
     <section id="problems" className="section-pad bg-slate-50/80">
       <div className="page-shell">
-        <header className="max-w-[36rem] mx-auto text-center mb-14 lg:mb-20">
+        <header className="max-w-2xl mb-12 lg:mb-16">
           <p className="text-[13px] font-medium text-brand-600 tracking-wide uppercase mb-4">The gap</p>
           <h2 className="text-2xl sm:text-3xl lg:text-[2rem] font-bold text-slate-900 tracking-tight mb-4">
-            Security budgets are under scrutiny
+            Security budgets are rising, confidence is not
           </h2>
           <p className="text-[17px] text-slate-500 leading-relaxed">
-            Cyber spend is heading toward <span className="text-slate-700 font-medium">$520B by 2026</span>. Most teams still can’t tie tools to outcomes.
+            Cyber spend is heading toward <span className="text-slate-700 font-medium">$520B by 2026</span>, but many leaders still struggle to connect tool spend to measurable outcomes.
           </p>
         </header>
 
-        <div className="max-w-4xl mx-auto grid sm:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid sm:grid-cols-2 gap-6 lg:gap-7">
           {problems.map((p) => (
             <div
               key={p.title}

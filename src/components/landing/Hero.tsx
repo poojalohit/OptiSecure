@@ -3,57 +3,64 @@ import { ArrowRight } from 'lucide-react'
 import { scrollToSection } from '../../utils/scroll'
 
 const stats = [
-  { value: '26%', label: 'CISOs rationalizing spend' },
-  { value: '44%', label: 'lack breach detection' },
-  { value: '40+', label: 'tools in large orgs' },
-  { value: '0', label: 'AI portfolio optimizers' },
+  { value: '26%', label: 'Teams actively rationalizing spend' },
+  { value: '44%', label: 'Org leaders lacking breach visibility' },
+  { value: '40+', label: 'Average tools in enterprise stacks' },
+  { value: '18–30%', label: 'Potential savings from consolidation' },
 ]
 
 export default function Hero() {
   return (
-    <section className="pt-28 pb-16 lg:pt-36 lg:pb-20">
+    <section className="pt-28 pb-16 lg:pt-36 lg:pb-24">
       <div className="page-shell">
-        <div className="max-w-[42rem] mx-auto text-center">
-          <p className="text-[13px] font-medium text-brand-600 tracking-wide uppercase mb-6 lg:mb-8">
-            Security portfolio intelligence
-          </p>
-
-          <h1 className="text-[2.25rem] sm:text-5xl lg:text-[3.25rem] font-bold text-slate-900 leading-[1.12] tracking-tight mb-6 lg:mb-8">
-            Cut waste. Prove ROI.{' '}
-            <span className="gradient-text">Own your stack.</span>
-          </h1>
-
-          <p className="text-[17px] lg:text-lg text-slate-500 leading-relaxed mb-10 lg:mb-12 max-w-[32rem] mx-auto">
-            One place to see overlap, compliance gaps, and what each dollar actually buys—so you can brief the board with numbers, not noise.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-            <Link
-              to="/dashboard"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-medium rounded-lg no-underline transition-colors text-[15px]"
-            >
-              Open product demo
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <button
-              type="button"
-              onClick={() => scrollToSection('solution')}
-              className="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 text-slate-600 hover:text-slate-900 font-medium rounded-lg transition-colors text-[15px] bg-white border border-slate-200 cursor-pointer"
-            >
-              How it works
-            </button>
+        <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-16 items-start">
+          <div className="text-center lg:text-left">
+            <p className="text-[13px] font-medium text-brand-600 tracking-wide uppercase mb-6">
+              Security portfolio intelligence
+            </p>
+            <h1 className="text-[2.25rem] sm:text-5xl lg:text-[3.15rem] font-bold text-slate-900 leading-[1.1] tracking-tight mb-6">
+              Optimize your security stack with clear, defensible ROI.
+            </h1>
+            <p className="text-[17px] text-slate-500 leading-relaxed mb-10 max-w-[35rem] mx-auto lg:mx-0">
+              OptiSecure helps security leaders remove redundant tools, map compliance coverage, and model risk-adjusted return before each purchase decision.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-3 sm:gap-4">
+              <Link
+                to="/dashboard"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-medium rounded-lg no-underline transition-colors text-[15px]"
+              >
+                Open product demo
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <button
+                type="button"
+                onClick={() => scrollToSection('solution')}
+                className="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 text-slate-600 hover:text-slate-900 font-medium rounded-lg transition-colors text-[15px] bg-white border border-slate-200 cursor-pointer"
+              >
+                How it works
+              </button>
+            </div>
           </div>
+
+          <aside className="rounded-2xl border border-slate-200/80 bg-slate-50 p-6 lg:p-7">
+            <p className="text-[11px] font-semibold uppercase tracking-widest text-slate-400 mb-6">
+              At a glance
+            </p>
+            <div className="grid grid-cols-2 gap-x-5 gap-y-6">
+              {stats.map((s) => (
+                <div key={s.label}>
+                  <p className="text-2xl lg:text-3xl font-bold text-slate-900 tabular-nums tracking-tight">{s.value}</p>
+                  <p className="text-[12px] text-slate-500 mt-1.5 leading-snug">{s.label}</p>
+                </div>
+              ))}
+            </div>
+          </aside>
         </div>
 
-        <div className="mt-16 lg:mt-24 pt-12 lg:pt-14 border-t border-slate-200">
-          <div className="max-w-4xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-y-10 lg:gap-y-0 lg:divide-x lg:divide-slate-200">
-            {stats.map((s) => (
-              <div key={s.label} className="text-center px-4 lg:px-6">
-                <p className="text-3xl lg:text-4xl font-bold text-slate-900 tabular-nums tracking-tight">{s.value}</p>
-                <p className="text-[13px] text-slate-500 mt-2 max-w-[9rem] mx-auto leading-snug">{s.label}</p>
-              </div>
-            ))}
-          </div>
+        <div className="mt-14 lg:mt-16 pt-10 border-t border-slate-200">
+          <p className="text-sm text-slate-500 leading-relaxed max-w-3xl">
+            Designed for CISOs and security teams managing 10–40 tools under compliance pressure. Start with portfolio visibility, then prioritize actions based on measurable impact.
+          </p>
         </div>
       </div>
     </section>

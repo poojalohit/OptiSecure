@@ -57,6 +57,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:where(section[id]) {
+  scroll-margin-top: 6rem;
+}
+
 body {
   font-family: var(--font-sans);
   color: #64748b;

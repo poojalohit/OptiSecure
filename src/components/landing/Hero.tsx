@@ -11,7 +11,7 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="pt-28 pb-16 lg:pt-36 lg:pb-24">
+    <section className="pt-36 pb-16 lg:pt-44 lg:pb-24">
       <div className="page-shell">
         <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-16 items-start">
           <div className="text-center lg:text-left">
@@ -42,11 +42,11 @@ export default function Hero() {
             </div>
           </div>
 
-          <aside className="rounded-2xl border border-slate-200/80 bg-slate-50 p-6 lg:p-7">
+          <aside className="rounded-2xl border border-slate-200/80 bg-slate-50 p-7 lg:p-8">
             <p className="text-[11px] font-semibold uppercase tracking-widest text-slate-400 mb-6">
               At a glance
             </p>
-            <div className="grid grid-cols-2 gap-x-5 gap-y-6">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-7">
               {stats.map((s) => (
                 <div key={s.label}>
                   <p className="text-2xl lg:text-3xl font-bold text-slate-900 tabular-nums tracking-tight">{s.value}</p>

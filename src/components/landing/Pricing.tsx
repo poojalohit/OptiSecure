@@ -42,11 +42,11 @@ export default function Pricing() {
           </p>
         </header>
 
-        <div className="grid lg:grid-cols-3 gap-6 lg:gap-6 lg:items-stretch">
+        <div className="grid lg:grid-cols-3 gap-7 lg:gap-8 lg:items-stretch">
           {tiers.map((t) => (
             <div
               key={t.name}
-              className={`rounded-2xl p-8 flex flex-col h-full ${
+              className={`rounded-2xl p-9 lg:p-10 flex flex-col h-full ${
                 t.highlighted ? 'bg-slate-900 text-white ring-2 ring-slate-900' : 'bg-white border border-slate-200/80 shadow-sm'
               }`}
             >
@@ -61,11 +61,11 @@ export default function Pricing() {
               </div>
               <p className={`text-[15px] mb-8 ${t.highlighted ? 'text-slate-400' : 'text-slate-500'}`}>{t.cap}</p>
 
-              <ul className="space-y-3 flex-1 mb-8">
+              <ul className="space-y-4 flex-1 mb-9">
                 {t.features.map((f) => (
                   <li key={f} className="flex items-start gap-2.5">
                     <Check className={`w-4 h-4 mt-0.5 shrink-0 ${t.highlighted ? 'text-brand-400' : 'text-emerald-500'}`} />
-                    <span className={`text-[15px] leading-snug ${t.highlighted ? 'text-slate-300' : 'text-slate-600'}`}>{f}</span>
+                    <span className={`text-[15px] leading-7 ${t.highlighted ? 'text-slate-300' : 'text-slate-600'}`}>{f}</span>
                   </li>
                 ))}
               </ul>

@@ -35,17 +35,17 @@ export default function ValueProp() {
           </p>
         </header>
 
-        <div className="grid lg:grid-cols-3 gap-6 lg:gap-7">
+        <div className="grid lg:grid-cols-3 gap-7 lg:gap-8">
           {pillars.map((p) => (
             <article
               key={p.title}
-              className="flex flex-col rounded-2xl border border-slate-200/80 bg-white p-8 lg:p-9 shadow-sm"
+              className="flex flex-col rounded-2xl border border-slate-200/80 bg-white p-9 lg:p-10 shadow-sm"
             >
               <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${p.gradient} flex items-center justify-center mb-6`}>
                 <p.icon className="w-5 h-5 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-slate-900 mb-3">{p.title}</h3>
-              <p className="text-[15px] text-slate-500 leading-relaxed flex-1">{p.body}</p>
+              <h3 className="text-lg font-semibold text-slate-900 mb-4">{p.title}</h3>
+              <p className="text-[15px] text-slate-500 leading-7 flex-1">{p.body}</p>
             </article>
           ))}
         </div>

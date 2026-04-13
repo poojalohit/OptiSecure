@@ -21,18 +21,18 @@ export default function Problems() {
           </p>
         </header>
 
-        <div className="grid sm:grid-cols-2 gap-6 lg:gap-7">
+        <div className="grid sm:grid-cols-2 gap-7 lg:gap-8">
           {problems.map((p) => (
             <div
               key={p.title}
-              className="flex gap-5 items-start p-6 lg:p-8 rounded-2xl bg-white border border-slate-200/80 shadow-sm"
+              className="flex gap-6 items-start p-7 lg:p-9 rounded-2xl bg-white border border-slate-200/80 shadow-sm"
             >
               <div className="w-11 h-11 rounded-xl bg-slate-100 flex items-center justify-center shrink-0">
                 <p.icon className="w-5 h-5 text-slate-700" />
               </div>
               <div className="min-w-0 pt-0.5">
-                <h3 className="text-[15px] font-semibold text-slate-900 mb-1">{p.title}</h3>
-                <p className="text-[15px] text-slate-500 leading-relaxed">{p.line}</p>
+                <h3 className="text-base font-semibold text-slate-900 mb-2">{p.title}</h3>
+                <p className="text-[15px] text-slate-500 leading-7">{p.line}</p>
               </div>
             </div>
           ))}

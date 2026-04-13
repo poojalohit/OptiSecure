@@ -1,8 +1,8 @@
-import { Target, Building2, Users, ArrowRight } from 'lucide-react'
+import { Target, Building2, Users, ChevronRight } from 'lucide-react'
 
 const phases = [
   {
-    phase: 'Phase 1 · NOW',
+    phase: 'Phase 1 · Now',
     revenue: '$50K–$200K ARR',
     title: 'Mid-Market CISOs',
     description: 'Financial services, healthcare, SaaS. Tool sprawl without in-house modeling teams.',
@@ -27,73 +27,79 @@ const phases = [
   },
 ]
 
+const whyPoints = [
+  'Complex enough to need OptiSecure\'s analysis capabilities',
+  'Small enough to lack in-house portfolio modeling teams',
+  'Compliance pressure drives urgency to act immediately',
+]
+
 export default function Segments() {
   return (
-    <section className="py-24 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-3">Customer Segments & Beachhead</p>
-          <h2 className="text-4xl font-extrabold text-slate-900 mb-4">
-            ICP, Entry Strategy & Expansion
+    <section className="py-28 bg-slate-50/70">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="text-center max-w-2xl mx-auto mb-20">
+          <p className="text-xs font-semibold text-brand-600 uppercase tracking-widest mb-4">Go-to-Market</p>
+          <h2 className="text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mb-5">
+            Entry Strategy & Expansion
           </h2>
-          <p className="text-lg text-slate-600">
+          <p className="text-base text-slate-500 leading-relaxed">
             Starting with mid-market enterprises — complex enough to need OptiSecure, small enough to lack in-house portfolio modeling.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
-          <div className="bg-brand-600 rounded-2xl p-8 text-white shadow-xl">
-            <div className="flex items-center gap-2 mb-4">
-              <Target className="w-5 h-5 text-brand-200" />
-              <span className="text-sm font-bold uppercase tracking-wider text-brand-200">Beachhead Market</span>
-            </div>
-            <h3 className="text-2xl font-bold mb-2">Mid-Market Enterprises</h3>
-            <p className="text-brand-200 text-sm mb-6">500–5,000 employees · $5M–$50M security budget</p>
+        <div className="grid lg:grid-cols-5 gap-8 max-w-5xl mx-auto mb-16">
+          <div className="lg:col-span-3 bg-brand-600 rounded-2xl p-8 text-white">
+            <p className="text-xs font-bold uppercase tracking-widest text-brand-200 mb-5">Beachhead Market</p>
+            <h3 className="text-2xl font-bold mb-1">Mid-Market Enterprises</h3>
+            <p className="text-brand-200 text-sm mb-7">500–5,000 employees · $5M–$50M security budget</p>
 
-            <div className="space-y-3 text-sm">
-              <div className="flex gap-3"><span className="font-semibold text-brand-200 w-16 shrink-0">Role:</span><span className="text-brand-100">CISO / VP of Security</span></div>
-              <div className="flex gap-3"><span className="font-semibold text-brand-200 w-16 shrink-0">Vertical:</span><span className="text-brand-100">Financial Services, Healthcare, SaaS</span></div>
-              <div className="flex gap-3"><span className="font-semibold text-brand-200 w-16 shrink-0">Pain:</span><span className="text-brand-100">10–30 tools, compliance audit pressure</span></div>
-              <div className="flex gap-3"><span className="font-semibold text-brand-200 w-16 shrink-0">Budget:</span><span className="text-brand-100">$50K–$200K/yr ARR willingness</span></div>
+            <div className="space-y-4 text-sm">
+              {[
+                ['Role', 'CISO / VP of Security'],
+                ['Vertical', 'Financial Services, Healthcare, SaaS'],
+                ['Pain', '10–30 tools, compliance audit pressure'],
+                ['Budget', '$50K–$200K/yr ARR willingness'],
+              ].map(([key, val]) => (
+                <div key={key} className="flex gap-4">
+                  <span className="font-semibold text-brand-300 w-16 shrink-0">{key}</span>
+                  <span className="text-white/90">{val}</span>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="flex flex-col justify-center space-y-2 text-sm text-slate-600">
-            <h4 className="text-lg font-bold text-slate-900 mb-3">Why Win Here First?</h4>
-            <div className="flex items-start gap-3">
-              <ArrowRight className="w-4 h-4 text-brand-500 mt-0.5 shrink-0" />
-              <span>Complex enough to need OptiSecure's analysis capabilities</span>
-            </div>
-            <div className="flex items-start gap-3">
-              <ArrowRight className="w-4 h-4 text-brand-500 mt-0.5 shrink-0" />
-              <span>Small enough to lack in-house portfolio modeling teams</span>
-            </div>
-            <div className="flex items-start gap-3">
-              <ArrowRight className="w-4 h-4 text-brand-500 mt-0.5 shrink-0" />
-              <span>Compliance pressure drives urgency to act immediately</span>
+          <div className="lg:col-span-2 flex flex-col justify-center">
+            <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-5">Why Win Here First</h4>
+            <div className="space-y-4">
+              {whyPoints.map((point) => (
+                <div key={point} className="flex items-start gap-3">
+                  <ChevronRight className="w-4 h-4 text-brand-500 mt-0.5 shrink-0" />
+                  <span className="text-sm text-slate-500 leading-relaxed">{point}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <h4 className="text-center text-sm font-bold text-slate-500 uppercase tracking-wider mb-6">Expansion Roadmap</h4>
-          <div className="grid md:grid-cols-3 gap-6">
+          <p className="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-8">Expansion Roadmap</p>
+          <div className="grid md:grid-cols-3 gap-5">
             {phases.map((phase) => (
               <div
                 key={phase.phase}
-                className={`rounded-2xl p-6 border ${
+                className={`rounded-2xl p-6 border transition-all ${
                   phase.active
-                    ? 'bg-white border-brand-200 shadow-md ring-1 ring-brand-100'
-                    : 'bg-white border-slate-200 shadow-sm'
+                    ? 'bg-white border-brand-200 shadow-md'
+                    : 'bg-white border-slate-200/80'
                 }`}
               >
-                <div className="flex items-center gap-2 mb-3">
-                  <phase.icon className={`w-5 h-5 ${phase.active ? 'text-brand-500' : 'text-slate-400'}`} />
-                  <span className="text-xs font-bold uppercase tracking-wider text-slate-400">{phase.phase}</span>
+                <div className="flex items-center gap-2.5 mb-4">
+                  <phase.icon className={`w-4 h-4 ${phase.active ? 'text-brand-500' : 'text-slate-400'}`} />
+                  <span className="text-[11px] font-bold uppercase tracking-widest text-slate-400">{phase.phase}</span>
                 </div>
-                <p className={`text-sm font-bold mb-1 ${phase.active ? 'text-brand-600' : 'text-slate-500'}`}>{phase.revenue}</p>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">{phase.title}</h3>
-                <p className="text-sm text-slate-600">{phase.description}</p>
+                <p className={`text-xs font-bold mb-1 ${phase.active ? 'text-brand-600' : 'text-slate-400'}`}>{phase.revenue}</p>
+                <h3 className="text-base font-bold text-slate-900 mb-2">{phase.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">{phase.description}</p>
               </div>
             ))}
           </div>

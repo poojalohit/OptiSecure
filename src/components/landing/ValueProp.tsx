@@ -1,4 +1,4 @@
-import { Repeat, TrendingUp, ClipboardCheck, Zap } from 'lucide-react'
+import { Repeat, TrendingUp, ClipboardCheck, Check } from 'lucide-react'
 
 const pillars = [
   {
@@ -10,7 +10,7 @@ const pillars = [
       'Quantified redundancy scores per tool pairing',
       'Avg. enterprise saves 18–30% on license spend',
     ],
-    color: 'from-brand-500 to-blue-600',
+    gradient: 'from-brand-500 to-brand-700',
   },
   {
     icon: TrendingUp,
@@ -21,7 +21,7 @@ const pillars = [
       'Marginal risk reduction quantified per dollar spent',
       'Board-ready reporting aligned to business outcomes',
     ],
-    color: 'from-emerald-500 to-teal-600',
+    gradient: 'from-emerald-500 to-emerald-700',
   },
   {
     icon: ClipboardCheck,
@@ -32,54 +32,48 @@ const pillars = [
       'Highlights over-coverage and blind spots simultaneously',
       'Replaces vendor claims with structured control mapping',
     ],
-    color: 'from-violet-500 to-purple-600',
+    gradient: 'from-violet-500 to-violet-700',
   },
 ]
 
 export default function ValueProp() {
   return (
-    <section id="solution" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-3">Value Proposition</p>
-          <h2 className="text-4xl font-extrabold text-slate-900 mb-4">
+    <section id="solution" className="py-28 bg-white">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="text-center max-w-2xl mx-auto mb-20">
+          <p className="text-xs font-semibold text-brand-600 uppercase tracking-widest mb-4">Value Proposition</p>
+          <h2 className="text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mb-5">
             The OptiSecure Difference
           </h2>
-          <p className="text-lg text-slate-600">
-            For CISOs & Security Leaders who need to justify security ROI, OptiSecure delivers
-            <span className="font-semibold text-slate-800"> data-driven portfolio decisions</span> —
-            unlike vendor-led, gut-feel budget allocation.
+          <p className="text-base text-slate-500 leading-relaxed">
+            For CISOs & Security Leaders who need to justify security ROI — OptiSecure delivers
+            data-driven portfolio decisions, not vendor-led gut-feel allocation.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {pillars.map((pillar) => (
-            <div key={pillar.title} className="relative group">
-              <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all h-full flex flex-col">
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${pillar.color} flex items-center justify-center mb-6 shadow-lg`}>
-                  <pillar.icon className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">{pillar.title}</h3>
-                <p className="text-brand-600 font-medium mb-5">{pillar.tagline}</p>
-                <ul className="space-y-3 flex-1">
-                  {pillar.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3 text-slate-600">
-                      <Zap className="w-4 h-4 text-brand-500 mt-1 shrink-0" />
-                      <span className="text-sm leading-relaxed">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+            <div key={pillar.title} className="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-slate-300 hover:shadow-lg transition-all flex flex-col">
+              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${pillar.gradient} flex items-center justify-center mb-6`}>
+                <pillar.icon className="w-6 h-6 text-white" />
               </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-1.5">{pillar.title}</h3>
+              <p className="text-sm text-brand-600 font-medium mb-6">{pillar.tagline}</p>
+              <ul className="space-y-3 flex-1">
+                {pillar.features.map((feature) => (
+                  <li key={feature} className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
+                    <span className="text-sm text-slate-500 leading-relaxed">{feature}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-50 border border-brand-200 text-sm text-brand-700">
-            <Zap className="w-4 h-4" />
-            No direct AI-native competitor — OptiSecure uniquely targets budget optimization & risk simulation
-          </div>
-        </div>
+        <p className="text-center text-xs text-slate-400 mt-14 max-w-xl mx-auto leading-relaxed">
+          No direct AI-native competitor exists — OptiSecure uniquely targets budget optimization & risk simulation for security portfolios.
+        </p>
       </div>
     </section>
   )

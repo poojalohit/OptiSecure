@@ -52,48 +52,48 @@ const tiers = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-24 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-3">Revenue Model</p>
-          <h2 className="text-4xl font-extrabold text-slate-900 mb-4">
-            How OptiSecure Gets Paid
+    <section id="pricing" className="py-28 bg-white">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="text-center max-w-2xl mx-auto mb-20">
+          <p className="text-xs font-semibold text-brand-600 uppercase tracking-widest mb-4">Pricing</p>
+          <h2 className="text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mb-5">
+            Simple, Transparent Plans
           </h2>
-          <p className="text-lg text-slate-600">
+          <p className="text-base text-slate-500 leading-relaxed">
             Tiered SaaS subscriptions that scale with your security portfolio. Annual contracts aligned to org size and feature depth.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-6 max-w-5xl mx-auto items-start">
           {tiers.map((tier) => (
             <div
               key={tier.name}
-              className={`rounded-2xl p-8 flex flex-col ${
+              className={`rounded-2xl p-7 flex flex-col ${
                 tier.highlighted
-                  ? 'bg-brand-600 text-white shadow-2xl shadow-brand-600/25 ring-2 ring-brand-400 scale-[1.03]'
-                  : 'bg-white border border-slate-200 shadow-sm'
+                  ? 'bg-slate-900 text-white shadow-2xl shadow-slate-900/20 ring-1 ring-slate-700'
+                  : 'bg-white border border-slate-200'
               }`}
             >
-              <h3 className={`text-lg font-bold mb-1 ${tier.highlighted ? 'text-brand-100' : 'text-slate-500'}`}>
+              <p className={`text-xs font-bold uppercase tracking-widest mb-5 ${tier.highlighted ? 'text-brand-400' : 'text-slate-400'}`}>
                 {tier.name}
-              </h3>
+              </p>
               <div className="flex items-baseline gap-1 mb-1">
-                <span className={`text-4xl font-extrabold ${tier.highlighted ? 'text-white' : 'text-slate-900'}`}>
+                <span className={`text-4xl font-extrabold tracking-tight ${tier.highlighted ? 'text-white' : 'text-slate-900'}`}>
                   {tier.price}
                 </span>
-                <span className={`text-lg ${tier.highlighted ? 'text-brand-200' : 'text-slate-400'}`}>
+                <span className={`text-sm ${tier.highlighted ? 'text-slate-400' : 'text-slate-400'}`}>
                   {tier.period}
                 </span>
               </div>
-              <p className={`text-sm mb-6 ${tier.highlighted ? 'text-brand-200' : 'text-slate-500'}`}>
+              <p className={`text-sm mb-7 ${tier.highlighted ? 'text-slate-400' : 'text-slate-400'}`}>
                 {tier.description}
               </p>
 
               <ul className="space-y-3 flex-1 mb-8">
                 {tier.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3">
-                    <Check className={`w-5 h-5 mt-0.5 shrink-0 ${tier.highlighted ? 'text-brand-200' : 'text-emerald-500'}`} />
-                    <span className={`text-sm ${tier.highlighted ? 'text-brand-100' : 'text-slate-600'}`}>
+                  <li key={feature} className="flex items-start gap-2.5">
+                    <Check className={`w-4 h-4 mt-0.5 shrink-0 ${tier.highlighted ? 'text-brand-400' : 'text-emerald-500'}`} />
+                    <span className={`text-sm leading-relaxed ${tier.highlighted ? 'text-slate-300' : 'text-slate-500'}`}>
                       {feature}
                     </span>
                   </li>
@@ -104,8 +104,8 @@ export default function Pricing() {
                 to="/dashboard"
                 className={`flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm no-underline transition-colors ${
                   tier.highlighted
-                    ? 'bg-white text-brand-600 hover:bg-brand-50'
-                    : 'bg-brand-600 text-white hover:bg-brand-700'
+                    ? 'bg-white text-slate-900 hover:bg-slate-100'
+                    : 'bg-slate-900 text-white hover:bg-slate-800'
                 }`}
               >
                 Get Started <ArrowRight className="w-4 h-4" />
@@ -114,22 +114,18 @@ export default function Pricing() {
           ))}
         </div>
 
-        <div className="mt-12 grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto text-center">
-          <div className="p-4">
-            <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Usage Overage</p>
-            <p className="text-lg font-bold text-slate-900 mt-1">$300/tool/yr</p>
-            <p className="text-sm text-slate-500">above plan tier limit</p>
-          </div>
-          <div className="p-4">
-            <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">MSSP White-Label</p>
-            <p className="text-lg font-bold text-slate-900 mt-1">$40K/yr + $2K/client</p>
-            <p className="text-sm text-slate-500">for managed providers</p>
-          </div>
-          <div className="p-4">
-            <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Professional Services</p>
-            <p className="text-lg font-bold text-slate-900 mt-1">$15K–$50K</p>
-            <p className="text-sm text-slate-500">per engagement</p>
-          </div>
+        <div className="mt-16 grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto text-center">
+          {[
+            { label: 'Usage Overage', value: '$300/tool/yr', sub: 'above plan tier limit' },
+            { label: 'MSSP White-Label', value: '$40K/yr + $2K/client', sub: 'for managed providers' },
+            { label: 'Professional Services', value: '$15K–$50K', sub: 'per engagement' },
+          ].map((item) => (
+            <div key={item.label}>
+              <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-1.5">{item.label}</p>
+              <p className="text-base font-bold text-slate-900">{item.value}</p>
+              <p className="text-xs text-slate-400 mt-0.5">{item.sub}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

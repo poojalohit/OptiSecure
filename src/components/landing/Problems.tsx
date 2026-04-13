@@ -1,34 +1,39 @@
 import { DollarSign, Layers, EyeOff, Megaphone } from 'lucide-react'
 
 const problems = [
-  { icon: DollarSign, title: 'Overspending', desc: 'Enterprises burn $1M–$10M+ annually on tools with unclear ROI.', color: 'text-red-400', bg: 'bg-red-50' },
-  { icon: Layers, title: 'Redundant Controls', desc: '44% of large orgs run 40+ tools — overlapping spend everywhere.', color: 'text-amber-400', bg: 'bg-amber-50' },
-  { icon: EyeOff, title: 'Zero Visibility', desc: '76% of CISOs say identifying the right solutions has grown harder.', color: 'text-brand-400', bg: 'bg-brand-50' },
-  { icon: Megaphone, title: 'Vendor-Driven Decisions', desc: 'Budget choices rely on marketing, not data or AI modeling.', color: 'text-emerald-400', bg: 'bg-emerald-50' },
+  { icon: DollarSign, title: 'Runaway spend', line: 'Millions on tools with fuzzy ROI.' },
+  { icon: Layers, title: 'Duplicate coverage', line: 'Dozens of products doing the same job.' },
+  { icon: EyeOff, title: 'No marginal view', line: 'Hard to show risk removed per dollar.' },
+  { icon: Megaphone, title: 'Vendor narratives', line: 'Budgets follow pitches, not models.' },
 ]
 
 export default function Problems() {
   return (
-    <section id="problems" className="py-24 md:py-32 bg-slate-50">
-      <div className="section-container">
-        <div className="max-w-xl mx-auto text-center mb-16">
-          <p className="text-sm font-medium text-brand-600 mb-4">The Problem</p>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
-            Why CISOs Are Losing the Budget Battle
+    <section id="problems" className="section-pad bg-slate-50/80">
+      <div className="page-shell">
+        <header className="max-w-[36rem] mx-auto text-center mb-14 lg:mb-20">
+          <p className="text-[13px] font-medium text-brand-600 tracking-wide uppercase mb-4">The gap</p>
+          <h2 className="text-2xl sm:text-3xl lg:text-[2rem] font-bold text-slate-900 tracking-tight mb-4">
+            Security budgets are under scrutiny
           </h2>
-          <p className="text-base text-slate-400">
-            The cybersecurity market hits <span className="text-slate-600 font-semibold">$520B by 2026</span> — yet most can't prove their investments work.
+          <p className="text-[17px] text-slate-500 leading-relaxed">
+            Cyber spend is heading toward <span className="text-slate-700 font-medium">$520B by 2026</span>. Most teams still can’t tie tools to outcomes.
           </p>
-        </div>
+        </header>
 
-        <div className="max-w-4xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="max-w-4xl mx-auto grid sm:grid-cols-2 gap-6 lg:gap-8">
           {problems.map((p) => (
-            <div key={p.title} className="text-center">
-              <div className={`w-12 h-12 rounded-xl ${p.bg} flex items-center justify-center mx-auto mb-5`}>
-                <p.icon className={`w-5 h-5 ${p.color}`} />
+            <div
+              key={p.title}
+              className="flex gap-5 items-start p-6 lg:p-8 rounded-2xl bg-white border border-slate-200/80 shadow-sm"
+            >
+              <div className="w-11 h-11 rounded-xl bg-slate-100 flex items-center justify-center shrink-0">
+                <p.icon className="w-5 h-5 text-slate-700" />
               </div>
-              <h3 className="text-base font-bold text-slate-900 mb-2">{p.title}</h3>
-              <p className="text-sm text-slate-400 leading-relaxed">{p.desc}</p>
+              <div className="min-w-0 pt-0.5">
+                <h3 className="text-[15px] font-semibold text-slate-900 mb-1">{p.title}</h3>
+                <p className="text-[15px] text-slate-500 leading-relaxed">{p.line}</p>
+              </div>
             </div>
           ))}
         </div>

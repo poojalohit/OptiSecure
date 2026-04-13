@@ -6,60 +6,61 @@ const links = [
   { label: 'Problem', id: 'problems' },
   { label: 'Solution', id: 'solution' },
   { label: 'Pricing', id: 'pricing' },
-  { label: 'Metrics', id: 'metrics' },
+  { label: 'Results', id: 'metrics' },
 ]
 
 export default function Footer() {
   return (
     <>
-      <section className="py-24 md:py-32 bg-slate-900">
-        <div className="section-container">
-          <div className="max-w-xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-5">
-              Ready to Optimize Your Security Portfolio?
+      <section className="section-pad bg-slate-900">
+        <div className="page-shell">
+          <div className="max-w-[36rem] mx-auto text-center">
+            <h2 className="text-2xl sm:text-3xl lg:text-[2rem] font-bold text-white tracking-tight mb-4">
+              See your portfolio in one place
             </h2>
-            <p className="text-base text-slate-400 mb-10">
-              Join CISOs using data — not vendor narratives — to make smarter investments.
+            <p className="text-[17px] text-slate-400 leading-relaxed mb-10">
+              Open the interactive demo—no signup required to explore the flows.
             </p>
-            <div className="flex items-center justify-center gap-4 flex-wrap">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link
                 to="/dashboard"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-slate-900 font-medium rounded-lg no-underline hover:bg-slate-100 transition-colors text-sm"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-slate-900 font-medium rounded-lg no-underline hover:bg-slate-100 transition-colors text-[15px]"
               >
-                Explore the Platform <ArrowRight className="w-4 h-4" />
+                Open demo <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 to="/login"
-                className="inline-flex items-center gap-2 px-6 py-3 text-slate-400 hover:text-white font-medium rounded-lg no-underline transition-colors text-sm border border-slate-700"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 text-slate-300 hover:text-white font-medium rounded-lg no-underline transition-colors text-[15px] border border-slate-600"
               >
-                Sign In
+                Sign in
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <footer className="bg-slate-950 py-8">
-        <div className="section-container">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+      <footer className="bg-slate-950 py-10">
+        <div className="page-shell">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="flex items-center gap-2">
-              <div className="w-6 h-6 rounded bg-brand-600 flex items-center justify-center">
-                <Shield className="w-3 h-3 text-white" />
+              <div className="w-7 h-7 rounded-md bg-brand-600 flex items-center justify-center">
+                <Shield className="w-3.5 h-3.5 text-white" />
               </div>
-              <span className="text-sm font-semibold text-slate-400">OptiSecure</span>
+              <span className="text-[15px] font-semibold text-slate-300">OptiSecure</span>
             </div>
-            <div className="flex items-center gap-8">
+            <nav className="flex flex-wrap items-center justify-center gap-8">
               {links.map((l) => (
                 <button
                   key={l.id}
+                  type="button"
                   onClick={() => scrollToSection(l.id)}
-                  className="text-xs text-slate-600 hover:text-slate-400 transition-colors bg-transparent border-none cursor-pointer"
+                  className="text-[13px] text-slate-500 hover:text-slate-300 transition-colors bg-transparent border-none cursor-pointer font-medium"
                 >
                   {l.label}
                 </button>
               ))}
-            </div>
-            <p className="text-xs text-slate-700">&copy; 2026 OptiSecure</p>
+            </nav>
+            <p className="text-[13px] text-slate-600">&copy; 2026 OptiSecure</p>
           </div>
         </div>
       </footer>

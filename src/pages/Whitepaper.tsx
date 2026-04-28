@@ -38,7 +38,7 @@ export default function Whitepaper() {
           <header className="wp-full-width text-center mb-12 lg:mb-16">
             <p className="text-[12px] font-semibold text-brand-600 tracking-[0.18em] uppercase mb-5">Whitepaper</p>
             <h1 className="text-[2rem] sm:text-[2.5rem] lg:text-[2.75rem] font-semibold text-slate-900 leading-[1.18] tracking-tight mb-5 max-w-2xl mx-auto">
-              Are You Buying Security — or Just Buying More Tools?
+              Are You Buying Security or Just Buying More Tools?
             </h1>
             <p className="text-[15px] text-slate-400">A whitepaper by OptiSecure &nbsp;|&nbsp; Spring 2026</p>
           </header>
@@ -52,7 +52,6 @@ export default function Whitepaper() {
               <P>You have 40+ tools running across the organization. Your team is stretched thin managing them. And when the CFO asks which tools are essential, which overlap, and where you could cut without increasing risk — you don't have a clean answer.</P>
               <P>So you call your vendors. Each one hands you an ROI calculator that proves, unsurprisingly, that their tool is indispensable.</P>
               <P>You leave the meeting with the same budget, the same tools, and the same unanswered question.</P>
-              <P><strong className="text-slate-900">This is not a failure of leadership. It's a failure of information.</strong></P>
             </Section>
 
             {/* --- Numbers --- */}
@@ -72,44 +71,43 @@ export default function Whitepaper() {
 
             {/* --- How Did We Get Here --- */}
             <Section title="How Did We Get Here?">
-              <P>Security portfolios rarely get built by design. They get built by reaction.</P>
-              <P>A breach happens — a tool gets purchased. An auditor flags a gap — another tool gets added. A vendor makes a compelling pitch at a conference — the contract gets signed. Repeat this over five years and you end up with a sprawling stack of tools that nobody has ever evaluated together, as a portfolio.</P>
-              <P>The result: controls that overlap, budgets that bloat, and a CISO who can't explain to the board what they're actually getting.</P>
-              <P>This isn't a small-company problem. <a href="https://www.stationx.net/cybersecurity-statistics/" target="_blank" rel="noopener noreferrer" className="text-brand-600 underline decoration-brand-200 hover:decoration-brand-400 transition-colors">144 AI security deals closed in 2025 alone</a>, making it the most active cybersecurity investment category. The market is adding new tools faster than any team can evaluate them — which means the portfolio problem gets worse every year, not better.</P>
+              <P>Security portfolios are rarely built by design. They grow by reaction.</P>
+              <P>A breach happens, so a tool gets purchased. An auditor flags a gap, so another tool gets added. A vendor makes a compelling pitch at a conference, so a contract gets signed. Repeat this over five years and you end up with a sprawling stack of tools that nobody has ever evaluated together, as a whole.</P>
+              <P>The result: overlapping controls, bloated budgets, and a security leader who can't clearly explain to the board what the organization is actually getting.</P>
+              <P>This isn't just a small-company problem. <a href="https://www.stationx.net/cybersecurity-statistics/" target="_blank" rel="noopener noreferrer" className="text-brand-600 underline decoration-brand-200 hover:decoration-brand-400 transition-colors">144 AI security deals closed in 2025 alone</a>, making it the most active cybersecurity investment category. The market is adding new tools faster than any team can evaluate them, which means the portfolio problem gets worse every year, not better.</P>
             </Section>
 
             {/* --- ROI Calculators --- */}
-            <Section title="The Dirty Secret of ROI Calculators">
-              <P>When security leaders try to measure whether their tools are delivering value, the most obvious place to turn is an ROI calculator. Every major vendor offers one — for free, on their website.</P>
-              <P>Here's the problem: <strong className="text-slate-900">every vendor-built ROI calculator is designed to justify that vendor's product.</strong></P>
-              <P>Cisco's calculator shows you how much Cisco is worth. Palo Alto's does the same for Palo Alto. None of them account for the five other tools you already own that do similar things. None of them tell you what the marginal value of adding their tool actually is — on top of everything else you're running.</P>
-              <P>This isn't a conspiracy. It's simply what incentives produce. Organizations that quantify risk in financial terms make better investment decisions and communicate security value in language that resonates with executives — but the key is adopting <a href="https://www.safe.security/" target="_blank" rel="noopener noreferrer" className="text-brand-600 underline decoration-brand-200 hover:decoration-brand-400 transition-colors">structured frameworks with a defensible methodology</a>, not optimistic vendor claims.</P>
-              <P>The frameworks exist. The independent rigor, applied to a live enterprise portfolio? That's what's missing.</P>
+            <Section title="The Problem with ROI Calculators">
+              <P>When security leaders try to measure whether their tools are delivering value, the most obvious place to turn is an ROI calculator. Every major vendor offers one, for free, on their website.</P>
+              <P>Here's the catch: every vendor-built ROI calculator is designed to justify that vendor's product.</P>
+              <P>Cisco's calculator tells you Cisco is worth it. Palo Alto's tells you the same about Palo Alto. None of them account for the other tools you already own that do similar things. None of them show you the real value of adding their tool on top of everything else you're already running.</P>
+              <P>This isn't a conspiracy. It's simply what incentives produce. The frameworks for objective risk measurement exist. What's missing is independent, rigorous analysis applied to a real, live portfolio.</P>
             </Section>
 
             {/* --- Real Cost --- */}
             <Section title="The Real Cost of Not Knowing">
-              <P>When portfolio decisions are driven by vendor marketing instead of data, the waste is significant — but it's invisible. Nobody sends you an invoice for redundant coverage. Nobody flags the alert that fired in two tools simultaneously. The money just quietly disappears into license renewals.</P>
-              <P>And the risk side is just as problematic. <a href="https://www.auxis.com/blog/cybersecurity-statistics/" target="_blank" rel="noopener noreferrer" className="text-brand-600 underline decoration-brand-200 hover:decoration-brand-400 transition-colors">The average cost of a data breach in the US has surged to a record $10.22 million.</a> When budgets are misallocated — spent on redundant tools instead of genuine coverage gaps — organizations are paying twice: once for tools they don't need, and again when an unaddressed vulnerability is exploited.</P>
-              <P><strong className="text-slate-900">The stakes are high. The decisions are being made blind.</strong></P>
+              <P>When budget decisions are driven by vendor marketing instead of data, the waste is real but invisible. Nobody sends you an invoice for redundant coverage. Nobody flags when the same alert fires in two different tools at once. The money quietly disappears into annual license renewals.</P>
+              <P>The risk side is just as serious. <a href="https://www.auxis.com/blog/cybersecurity-statistics/" target="_blank" rel="noopener noreferrer" className="text-brand-600 underline decoration-brand-200 hover:decoration-brand-400 transition-colors">The average cost of a data breach in the US has reached $10.22 million.</a> When budgets are misallocated, spent on tools that duplicate each other rather than filling real gaps, organizations end up paying twice: once for tools they don't need, and again when a gap that nobody noticed gets exploited.</P>
+              <P>The stakes are high. The decisions are being made blind.</P>
             </Section>
 
             {/* --- Getting Harder --- */}
             <Section title="Why This Is Getting Harder, Not Easier">
-              <P>Three forces are making the portfolio problem more acute in 2026 than ever before:</P>
+              <P>Three things are making this problem more urgent in 2026:</P>
 
               <div>
                 <ForceBlock
-                  title="Boards are scrutinizing security budgets like never before."
-                  body="As cybersecurity spending has grown into the tens of millions, CFOs and audit committees want the same rigor applied to security spend that they apply to any other major cost center. A narrative is no longer enough. Data is required."
+                  title="Boards want answers, not narratives."
+                  body={<>As cybersecurity budgets have grown into the tens of millions, CFOs and audit committees want the same rigor applied to security spend that they apply to any other major business cost. Saying &ldquo;we&rsquo;re protected&rdquo; is no longer enough. Showing the data is now expected.</>}
                 />
                 <ForceBlock
-                  title="Compliance pressure is intensifying."
-                  body="Between NIST updates, SOC 2 requirements, ISO 27001, and the EU AI Act coming into full effect in August 2026, organizations face an increasingly complex web of frameworks. Navigating them without clear visibility into what your tools actually cover — and where they overlap — is both expensive and risky."
+                  title="Compliance is getting more complex."
+                  body="Between NIST updates, SOC 2, ISO 27001, and the EU AI Act taking full effect in August 2026, organizations face a growing web of requirements. Without clear visibility into what your tools actually cover and where they overlap, staying compliant is both expensive and risky."
                 />
                 <ForceBlock
-                  title="The tool market keeps expanding."
-                  body={<>AI-enhanced security platforms now command <a href="https://www.stationx.net/cybersecurity-statistics/" target="_blank" rel="noopener noreferrer" className="text-brand-600 underline decoration-brand-200 hover:decoration-brand-400 transition-colors">31% of cybersecurity budgets</a>, and new product categories are emerging every quarter. More choice means more complexity — and more opportunity to buy the wrong thing, or the right thing twice.</>}
+                  title="The market keeps adding more tools."
+                  body={<>AI-powered security platforms now account for <a href="https://www.stationx.net/cybersecurity-statistics/" target="_blank" rel="noopener noreferrer" className="text-brand-600 underline decoration-brand-200 hover:decoration-brand-400 transition-colors">31% of cybersecurity budgets</a>, and new product categories are launching every quarter. More choice means more complexity, and more opportunity to buy the wrong thing, or the right thing twice.</>}
                 />
               </div>
             </Section>
@@ -117,7 +115,7 @@ export default function Whitepaper() {
             {/* --- The Gap --- */}
             <Section title="The Gap No One Has Filled">
               <P>There are tools that tell you what assets you have. There are frameworks that tell you what risks exist. There are vendors that tell you their product is worth it.</P>
-              <P>What doesn't exist — yet — is a neutral, AI-native system that looks at your entire portfolio and tells you: <strong className="text-slate-900">what's working, what's redundant, and where your next dollar should actually go.</strong></P>
+              <P>What doesn't exist yet is a neutral system that looks at your entire portfolio and tells you: what's working, what's redundant, and where your next dollar should actually go.</P>
               <P>That gap is costing enterprises real money. And it's the problem worth solving.</P>
             </Section>
 

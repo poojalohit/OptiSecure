@@ -15,7 +15,7 @@ export default function Whitepaper() {
     <div className="min-h-screen bg-white">
       {/* Navbar */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80">
-        <div className="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14">
+        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 40px' }} className="flex items-center justify-between h-14">
           <div className="flex items-center gap-2">
             <div className="w-7 h-7 rounded-md bg-brand-600 flex items-center justify-center">
               <Shield className="w-3.5 h-3.5 text-white" />
@@ -28,21 +28,23 @@ export default function Whitepaper() {
         </div>
       </nav>
 
-      {/* Whitepaper content */}
-      <article className="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 lg:pt-20 lg:pb-20">
-        {/* Header */}
-        <header className="max-w-3xl mx-auto text-center mb-12 lg:mb-16">
-          <p className="text-[12px] font-semibold text-brand-600 tracking-[0.18em] uppercase mb-5">Whitepaper</p>
-          <h1 className="text-[2rem] sm:text-[2.5rem] lg:text-[2.75rem] font-semibold text-slate-900 leading-[1.18] tracking-tight mb-5">
-            Are You Buying Security — or Just Buying More Tools?
-          </h1>
-          <p className="text-[15px] text-slate-400">A whitepaper by OptiSecure &nbsp;|&nbsp; Spring 2026</p>
-        </header>
+      {/* Page body — vertical padding only; horizontal layout handled by .wp-columns */}
+      <article className="pt-12 pb-16 lg:pt-20 lg:pb-20">
 
-        {/* Two-column layout: only enabled at lg (1024px+) */}
-        <div className="lg:grid lg:grid-cols-[minmax(0,720px)_300px] lg:gap-16 lg:items-start">
-          {/* Main article column */}
-          <div className="max-w-[720px] mx-auto lg:mx-0 lg:max-w-none min-w-0">
+        {/* .wp-columns is the outermost wrapper containing both main content and sidebar */}
+        <div className="wp-columns">
+
+          {/* Header spans both columns */}
+          <header className="wp-full-width text-center mb-12 lg:mb-16">
+            <p className="text-[12px] font-semibold text-brand-600 tracking-[0.18em] uppercase mb-5">Whitepaper</p>
+            <h1 className="text-[2rem] sm:text-[2.5rem] lg:text-[2.75rem] font-semibold text-slate-900 leading-[1.18] tracking-tight mb-5 max-w-2xl mx-auto">
+              Are You Buying Security — or Just Buying More Tools?
+            </h1>
+            <p className="text-[15px] text-slate-400">A whitepaper by OptiSecure &nbsp;|&nbsp; Spring 2026</p>
+          </header>
+
+          {/* Main article column — grid controls its width */}
+          <div className="wp-main">
 
             {/* --- Picture This --- */}
             <Section title="Picture This">
@@ -57,7 +59,8 @@ export default function Whitepaper() {
             <Section title="The Numbers Behind the Problem">
               <P>The cybersecurity market is projected to reach $520 billion by 2026. Organizations are not underinvesting in security. The problem is something else entirely.</P>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 my-10">
+              {/* .wp-stats: display:grid; grid-template-columns:1fr 1fr; gap:16px */}
+              <div className="wp-stats">
                 <StatBlock value="40+" label="Security tools run by the average large enterprise" />
                 <StatBlock value="44%" label="Can't reliably detect breaches — despite all that spending" />
                 <StatBlock value="76%" label="Say identifying the right solutions has gotten more complex" />
@@ -121,8 +124,8 @@ export default function Whitepaper() {
             {/* --- Divider --- */}
             <div className="my-12 lg:my-16 border-t border-slate-200" />
 
-            {/* --- CTA --- */}
-            <section id="signup" className="scroll-mt-20">
+            {/* --- CTA / Sign-up --- */}
+            <section id="signup" className="scroll-mt-28">
               <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-10 text-center shadow-sm">
                 <h2 className="text-xl sm:text-2xl font-semibold text-slate-900 tracking-tight mb-3">
                   We're working on it.
@@ -169,10 +172,10 @@ export default function Whitepaper() {
               </div>
             </section>
 
-          </div>
+          </div>{/* end .wp-main */}
 
-          {/* Sidebar — visible only on lg (1024px) and above */}
-          <aside className="hidden lg:block sticky top-24">
+          {/* Sidebar — .wp-sidebar: sticky; top:100px; hidden below 900px via media query */}
+          <aside className="wp-sidebar">
             <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
               <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-5">In this paper</p>
               <ol className="space-y-3 text-sm text-slate-600">
@@ -188,12 +191,13 @@ export default function Whitepaper() {
               </a>
             </div>
           </aside>
-        </div>
+
+        </div>{/* end .wp-columns */}
       </article>
 
       {/* Footer */}
       <footer className="border-t border-slate-100 py-8">
-        <div className="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 40px' }} className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded bg-brand-600 flex items-center justify-center">
               <Shield className="w-3 h-3 text-white" />
@@ -207,7 +211,7 @@ export default function Whitepaper() {
   )
 }
 
-/* ---- Sub-components ---- */
+/* ── Sub-components ─────────────────────────────────────────── */
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -224,7 +228,7 @@ function P({ children }: { children: React.ReactNode }) {
 
 function StatBlock({ value, label }: { value: string; label: string }) {
   return (
-    <div className="p-5 sm:p-6 rounded-xl border border-slate-200 bg-slate-50">
+    <div className="wp-stat-card">
       <p className="text-2xl sm:text-3xl font-semibold text-slate-900 tabular-nums tracking-tight mb-2">{value}</p>
       <p className="text-sm text-slate-500 leading-6">{label}</p>
     </div>

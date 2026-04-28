@@ -60,3 +60,70 @@ body {
   background: #dbeafe;
   color: #1e3a8a;
 }
+
+/* ── Whitepaper layout ─────────────────────────────────────── */
+
+body {
+  overflow-x: hidden;
+}
+
+/* Outermost wrapper: two-column grid containing main content + sidebar */
+.wp-columns {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Spans all columns (used for the header row inside the grid) */
+.wp-full-width {
+  grid-column: 1 / -1;
+}
+
+/* Main article column — let the grid control its width */
+.wp-main {
+  min-width: 0;
+}
+
+/* Sidebar */
+.wp-sidebar {
+  position: sticky;
+  top: 100px;
+  align-self: start;
+  height: fit-content;
+}
+
+/* Stat cards container */
+.wp-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+  margin: 24px 0;
+}
+
+/* Individual stat card */
+.wp-stat-card {
+  min-height: 120px;
+  padding: 20px;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+@media (max-width: 900px) {
+  .wp-columns {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .wp-sidebar {
+    display: none;
+  }
+
+  .wp-stats {
+    grid-template-columns: 1fr;
+  }
+}

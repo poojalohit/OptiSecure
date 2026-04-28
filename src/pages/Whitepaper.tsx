@@ -229,7 +229,7 @@ function StatBlock({ value, label }: { value: string; label: string }) {
 
 function ForceBlock({ title, body }: { title: string; body: React.ReactNode }) {
   return (
-    <div className="pl-5 py-1 border-l-2 border-brand-200">
+    <div className="pl-5 py-1">
       <p className="wp-force-title text-slate-900 font-semibold">{title}</p>
       <p className="text-[16px] text-slate-600">{body}</p>
     </div>

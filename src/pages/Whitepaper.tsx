@@ -12,10 +12,10 @@ export default function Whitepaper() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-white">
       {/* Navbar */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80">
-        <div className="max-w-4xl mx-auto px-6 lg:px-10 flex items-center justify-between h-14">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-14">
           <div className="flex items-center gap-2">
             <div className="w-7 h-7 rounded-md bg-brand-600 flex items-center justify-center">
               <Shield className="w-3.5 h-3.5 text-white" />
@@ -29,16 +29,18 @@ export default function Whitepaper() {
       </nav>
 
       {/* Whitepaper content */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-10 pt-10 pb-12 lg:pt-14 lg:pb-16">
-        <div className="bg-white border border-slate-200 rounded-2xl shadow-sm px-6 py-10 sm:px-10 sm:py-12 lg:px-16 lg:py-16">
+      <article className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-16 lg:pt-20 lg:pb-20">
         {/* Header */}
-        <header className="mb-14 lg:mb-16 text-center">
+        <header className="mb-16 lg:mb-20 text-center max-w-4xl mx-auto">
           <p className="text-[12px] font-semibold text-brand-600 tracking-[0.18em] uppercase mb-5">Whitepaper</p>
           <h1 className="text-[2rem] sm:text-[2.5rem] lg:text-[2.75rem] font-semibold text-slate-900 leading-[1.18] tracking-tight mb-5 max-w-2xl mx-auto">
             Are You Buying Security — or Just Buying More Tools?
           </h1>
           <p className="text-[15px] text-slate-400">A whitepaper by OptiSecure &nbsp;|&nbsp; Spring 2026</p>
         </header>
+
+        <div className="grid lg:grid-cols-[minmax(0,1fr)_320px] gap-12 xl:gap-16 items-start">
+          <div className="min-w-0">
 
         {/* --- Picture This --- */}
         <Section title="Picture This">
@@ -119,23 +121,23 @@ export default function Whitepaper() {
 
         {/* --- CTA --- */}
         <section id="signup" className="scroll-mt-20">
-          <div className="rounded-2xl bg-slate-900 p-8 sm:p-12 text-center">
-            <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight mb-3">
+          <div className="rounded-2xl border border-slate-200 bg-white p-8 sm:p-10 text-center shadow-sm">
+            <h2 className="text-xl sm:text-2xl font-semibold text-slate-900 tracking-tight mb-3">
               We're working on it.
             </h2>
-            <p className="text-base text-slate-400 mb-8 max-w-md mx-auto">
+            <p className="text-base text-slate-500 mb-8 max-w-md mx-auto">
               Stay tuned. Sign up to be the first to know when OptiSecure launches.
             </p>
 
             {!submitted ? (
-              <form onSubmit={handleSubmit} className="max-w-sm mx-auto space-y-3">
+              <form onSubmit={handleSubmit} className="max-w-xl mx-auto grid sm:grid-cols-[1fr_1fr_auto] gap-3">
                 <input
                   type="text"
                   value={name}
                   onChange={e => setName(e.target.value)}
                   placeholder="Your name"
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent"
+                  className="w-full px-4 py-3 rounded-lg bg-white border border-slate-200 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent"
                 />
                 <input
                   type="email"
@@ -143,13 +145,13 @@ export default function Whitepaper() {
                   onChange={e => setEmail(e.target.value)}
                   placeholder="you@company.com"
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent"
+                  className="w-full px-4 py-3 rounded-lg bg-white border border-slate-200 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent"
                 />
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white text-slate-900 font-medium rounded-lg hover:bg-slate-100 transition-colors text-sm cursor-pointer border-none"
+                  className="w-full sm:w-auto whitespace-nowrap flex items-center justify-center gap-2 px-5 py-3 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-colors text-sm cursor-pointer border-none"
                 >
-                  Sign up to be the first to know
+                  Sign up
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </form>
@@ -158,18 +160,36 @@ export default function Whitepaper() {
                 <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center">
                   <Check className="w-5 h-5 text-emerald-500" />
                 </div>
-                <p className="text-white font-medium">You're on the list, {name.split(' ')[0]}.</p>
+                <p className="text-slate-900 font-medium">You're on the list, {name.split(' ')[0]}.</p>
                 <p className="text-sm text-slate-400">We'll be in touch soon.</p>
               </div>
             )}
           </div>
         </section>
+          </div>
+
+          <aside className="hidden lg:block sticky top-24">
+            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+              <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-5">In this paper</p>
+              <ol className="space-y-3 text-sm text-slate-600">
+                <li>1. Budget pressure</li>
+                <li>2. Why tool sprawl happens</li>
+                <li>3. Why vendor ROI falls short</li>
+                <li>4. The real cost of uncertainty</li>
+                <li>5. The portfolio intelligence gap</li>
+              </ol>
+              <a href="#signup" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-slate-900 px-4 py-3 text-sm font-medium text-white no-underline hover:bg-slate-800 transition-colors">
+                Get early access
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </aside>
         </div>
       </article>
 
       {/* Footer */}
       <footer className="border-t border-slate-100 py-8">
-        <div className="max-w-4xl mx-auto px-6 lg:px-10 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded bg-brand-600 flex items-center justify-center">
               <Shield className="w-3 h-3 text-white" />

@@ -98,7 +98,7 @@ export default function Whitepaper() {
             <Section title="Why This Is Getting Harder, Not Easier">
               <P>Three forces are making the portfolio problem more acute in 2026 than ever before:</P>
 
-              <div className="my-8 space-y-6">
+              <div>
                 <ForceBlock
                   title="Boards are scrutinizing security budgets like never before."
                   body="As cybersecurity spending has grown into the tens of millions, CFOs and audit committees want the same rigor applied to security spend that they apply to any other major cost center. A narrative is no longer enough. Data is required."
@@ -121,28 +121,25 @@ export default function Whitepaper() {
               <P>That gap is costing enterprises real money. And it's the problem worth solving.</P>
             </Section>
 
-            {/* --- Divider --- */}
-            <div className="my-12 lg:my-16 border-t border-slate-200" />
-
             {/* --- CTA / Sign-up --- */}
             <section id="signup" className="scroll-mt-28">
-              <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-10 text-center shadow-sm">
-                <h2 className="text-xl sm:text-2xl font-semibold text-slate-900 tracking-tight mb-3">
+              <div className="wp-cta">
+                <h2 className="text-xl sm:text-2xl font-semibold text-slate-900 tracking-tight">
                   We're working on it.
                 </h2>
-                <p className="text-base text-slate-500 mb-8 max-w-md mx-auto">
+                <p className="text-base text-slate-500 max-w-md mx-auto">
                   Stay tuned. Sign up to be the first to know when OptiSecure launches.
                 </p>
 
                 {!submitted ? (
-                  <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-3 max-w-xl mx-auto">
+                  <form onSubmit={handleSubmit} className="wp-cta-form">
                     <input
                       type="text"
                       value={name}
                       onChange={e => setName(e.target.value)}
                       placeholder="Your name"
                       required
-                      className="w-full min-w-0 px-4 py-3 rounded-lg bg-white border border-slate-200 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent"
+                      className="wp-cta-input"
                     />
                     <input
                       type="email"
@@ -150,12 +147,9 @@ export default function Whitepaper() {
                       onChange={e => setEmail(e.target.value)}
                       placeholder="you@company.com"
                       required
-                      className="w-full min-w-0 px-4 py-3 rounded-lg bg-white border border-slate-200 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent"
+                      className="wp-cta-input"
                     />
-                    <button
-                      type="submit"
-                      className="w-full sm:w-auto whitespace-nowrap flex items-center justify-center gap-2 px-5 py-3 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-colors text-sm cursor-pointer border-none"
-                    >
+                    <button type="submit" className="wp-cta-btn">
                       Sign up
                       <ArrowRight className="w-4 h-4" />
                     </button>
@@ -215,15 +209,15 @@ export default function Whitepaper() {
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="mb-12 lg:mb-14">
-      <h2 className="text-xl sm:text-2xl font-semibold text-slate-900 tracking-tight mb-6 pb-3 border-b border-slate-100">{title}</h2>
+    <section>
+      <h2 className="text-xl sm:text-2xl font-semibold text-slate-900 tracking-tight pb-3 border-b border-slate-100">{title}</h2>
       {children}
     </section>
   )
 }
 
 function P({ children }: { children: React.ReactNode }) {
-  return <p className="text-[16px] lg:text-[17px] text-slate-600 leading-[1.85] mb-5 last:mb-0">{children}</p>
+  return <p className="text-[16px] lg:text-[17px] text-slate-600">{children}</p>
 }
 
 function StatBlock({ value, label }: { value: string; label: string }) {
@@ -238,8 +232,8 @@ function StatBlock({ value, label }: { value: string; label: string }) {
 function ForceBlock({ title, body }: { title: string; body: React.ReactNode }) {
   return (
     <div className="pl-5 py-1 border-l-2 border-brand-200">
-      <p className="text-[16px] lg:text-[17px] text-slate-900 font-semibold mb-2">{title}</p>
-      <p className="text-[16px] lg:text-[17px] text-slate-600 leading-[1.85]">{body}</p>
+      <p className="wp-force-title text-slate-900 font-semibold">{title}</p>
+      <p className="text-[16px] text-slate-600">{body}</p>
     </div>
   )
 }

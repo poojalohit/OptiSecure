@@ -12,10 +12,10 @@ export default function Whitepaper() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-slate-50">
       {/* Navbar */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80">
-        <div className="max-w-3xl mx-auto px-6 flex items-center justify-between h-14">
+        <div className="max-w-4xl mx-auto px-6 lg:px-10 flex items-center justify-between h-14">
           <div className="flex items-center gap-2">
             <div className="w-7 h-7 rounded-md bg-brand-600 flex items-center justify-center">
               <Shield className="w-3.5 h-3.5 text-white" />
@@ -29,14 +29,15 @@ export default function Whitepaper() {
       </nav>
 
       {/* Whitepaper content */}
-      <article className="max-w-3xl mx-auto px-6 pt-16 pb-12 lg:pt-24 lg:pb-16">
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-10 pt-10 pb-12 lg:pt-14 lg:pb-16">
+        <div className="bg-white border border-slate-200 rounded-2xl shadow-sm px-6 py-10 sm:px-10 sm:py-12 lg:px-16 lg:py-16">
         {/* Header */}
-        <header className="mb-16 lg:mb-20">
-          <p className="text-[13px] font-medium text-brand-600 tracking-wide uppercase mb-5">Whitepaper</p>
-          <h1 className="text-[2rem] sm:text-[2.5rem] lg:text-[2.75rem] font-bold text-slate-900 leading-[1.15] tracking-tight mb-6">
+        <header className="mb-14 lg:mb-16 text-center">
+          <p className="text-[12px] font-semibold text-brand-600 tracking-[0.18em] uppercase mb-5">Whitepaper</p>
+          <h1 className="text-[2rem] sm:text-[2.5rem] lg:text-[2.75rem] font-semibold text-slate-900 leading-[1.18] tracking-tight mb-5 max-w-2xl mx-auto">
             Are You Buying Security — or Just Buying More Tools?
           </h1>
-          <p className="text-base text-slate-400">A whitepaper by OptiSecure &nbsp;|&nbsp; Spring 2026</p>
+          <p className="text-[15px] text-slate-400">A whitepaper by OptiSecure &nbsp;|&nbsp; Spring 2026</p>
         </header>
 
         {/* --- Picture This --- */}
@@ -114,7 +115,7 @@ export default function Whitepaper() {
         </Section>
 
         {/* --- Divider --- */}
-        <div className="my-16 lg:my-20 border-t border-slate-200" />
+        <div className="my-14 lg:my-16 border-t border-slate-200" />
 
         {/* --- CTA --- */}
         <section id="signup" className="scroll-mt-20">
@@ -163,11 +164,12 @@ export default function Whitepaper() {
             )}
           </div>
         </section>
+        </div>
       </article>
 
       {/* Footer */}
       <footer className="border-t border-slate-100 py-8">
-        <div className="max-w-3xl mx-auto px-6 flex items-center justify-between">
+        <div className="max-w-4xl mx-auto px-6 lg:px-10 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded bg-brand-600 flex items-center justify-center">
               <Shield className="w-3 h-3 text-white" />
@@ -185,31 +187,31 @@ export default function Whitepaper() {
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="mb-14 lg:mb-16">
-      <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight mb-6">{title}</h2>
+    <section className="mb-12 lg:mb-14">
+      <h2 className="text-xl sm:text-2xl font-semibold text-slate-900 tracking-tight mb-6 pb-3 border-b border-slate-100">{title}</h2>
       {children}
     </section>
   )
 }
 
 function P({ children }: { children: React.ReactNode }) {
-  return <p className="text-[16px] lg:text-[17px] text-slate-600 leading-[1.8] mb-5 last:mb-0">{children}</p>
+  return <p className="text-[16px] lg:text-[17px] text-slate-600 leading-[2] mb-5 last:mb-0 [text-indent:1.5rem]">{children}</p>
 }
 
 function StatBlock({ value, label }: { value: string; label: string }) {
   return (
-    <div className="p-5 rounded-xl border border-slate-200 bg-slate-50/60">
-      <p className="text-2xl sm:text-3xl font-bold text-slate-900 tabular-nums tracking-tight mb-1.5">{value}</p>
-      <p className="text-sm text-slate-500 leading-snug">{label}</p>
+    <div className="p-6 rounded-xl border border-slate-200 bg-slate-50">
+      <p className="text-2xl sm:text-3xl font-semibold text-slate-900 tabular-nums tracking-tight mb-2">{value}</p>
+      <p className="text-sm text-slate-500 leading-6">{label}</p>
     </div>
   )
 }
 
 function ForceBlock({ title, body }: { title: string; body: React.ReactNode }) {
   return (
-    <div className="pl-5 border-l-2 border-brand-200">
-      <p className="text-[16px] lg:text-[17px] text-slate-900 font-semibold mb-1.5">{title}</p>
-      <p className="text-[16px] lg:text-[17px] text-slate-600 leading-[1.8]">{body}</p>
+    <div className="pl-6 py-1 border-l-2 border-brand-200">
+      <p className="text-[16px] lg:text-[17px] text-slate-900 font-semibold mb-2">{title}</p>
+      <p className="text-[16px] lg:text-[17px] text-slate-600 leading-[2]">{body}</p>
     </div>
   )
 }

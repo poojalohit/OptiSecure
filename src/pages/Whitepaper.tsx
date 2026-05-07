@@ -18,42 +18,42 @@ export default function Whitepaper() {
     <div>
       <SiteNav />
 
-      <article className="pt-12 pb-16 lg:pt-20 lg:pb-20">
+      <article className="pt-12 pb-16 lg:pt-16 lg:pb-20">
         <div className="wp-columns">
-          <header className="wp-full-width text-center mb-12 lg:mb-16">
-            <p className="text-[12px] font-semibold text-brand-600 tracking-[0.18em] uppercase mb-5">
-              Whitepaper &middot; Spring 2026
-            </p>
-            <h1 className="text-[2.1rem] sm:text-[2.5rem] lg:text-[2.8rem] font-semibold text-slate-900 leading-[1.16] tracking-tight mb-5 max-w-3xl mx-auto">
-              Are You Buying Security or Just Buying More Tools?
-            </h1>
-            <p className="text-[15px] text-slate-500 max-w-xl mx-auto">
-              How big companies end up with dozens of overlapping security tools,
-              why they cannot tell which ones are working, and what a smarter
-              approach would look like.
-            </p>
-            <div className="mt-7 flex flex-wrap justify-center gap-3">
-              <a href="#signup" className="site-nav-cta" style={{ marginLeft: 0 }}>
-                Get early access
-              </a>
-              <Link
-                to="/demo"
-                className="site-nav-link"
-                style={{
-                  background: '#fff',
-                  border: '1px solid #e2e8f0',
-                  padding: '7px 14px',
-                  fontSize: 13,
-                }}
-              >
-                <BarChart3 className="w-3.5 h-3.5 mr-1.5" />
-                See the sample dashboard
-              </Link>
-            </div>
-          </header>
-
-          {/* Main article column */}
+          {/* Main article column (header now lives inside it so it left-aligns with body) */}
           <div className="wp-main">
+            <header className="wp-header">
+              <p className="wp-header-eyebrow">
+                Whitepaper &middot; Spring 2026
+              </p>
+              <h1 className="wp-header-title">
+                Are You Buying Security or Just Buying More Tools?
+              </h1>
+              <p className="wp-header-subtitle">
+                How big companies end up with dozens of overlapping security tools,
+                why they cannot tell which ones are working, and what a smarter
+                approach would look like.
+              </p>
+              <div className="wp-header-actions">
+                <a href="#signup" className="site-nav-cta" style={{ marginLeft: 0 }}>
+                  Get early access
+                </a>
+                <Link
+                  to="/demo"
+                  className="site-nav-link"
+                  style={{
+                    background: '#fff',
+                    border: '1px solid #e2e8f0',
+                    padding: '7px 14px',
+                    fontSize: 13,
+                  }}
+                >
+                  <BarChart3 className="w-3.5 h-3.5 mr-1.5" />
+                  See the sample dashboard
+                </Link>
+              </div>
+            </header>
+
             <Section title="Picture this">
               <P>
                 You run cybersecurity at a large company. Budget season is here,

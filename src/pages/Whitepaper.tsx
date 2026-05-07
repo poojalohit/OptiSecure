@@ -314,7 +314,7 @@ export default function Whitepaper() {
           </div>
 
           <aside className="wp-sidebar">
-            <div className="rounded-xl border border-slate-200 bg-slate-50 px-7 pt-7 pb-7">
+            <div className="rounded-xl border border-slate-200 bg-slate-50 px-9 py-8">
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-5">
                 In this paper
               </p>

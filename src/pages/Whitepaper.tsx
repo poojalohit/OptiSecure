@@ -314,11 +314,11 @@ export default function Whitepaper() {
           </div>
 
           <aside className="wp-sidebar">
-            <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-4">
+            <div className="rounded-xl border border-slate-200 bg-slate-50 px-7 pt-7 pb-7">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-5">
                 In this paper
               </p>
-              <ol className="space-y-2.5 text-[13px] text-slate-600">
+              <ol className="space-y-3 text-[13px] text-slate-600 leading-6">
                 <li>1. Picture this</li>
                 <li>2. The numbers behind the problem</li>
                 <li>3. How did we get here?</li>
@@ -328,20 +328,20 @@ export default function Whitepaper() {
                 <li>7. The gap no one has filled</li>
               </ol>
 
-              <div className="mt-5 pt-5 border-t border-slate-200">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-3">
+              <div className="mt-7 pt-6 border-t border-slate-200">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-4">
                   See it in action
                 </p>
                 <Link
                   to="/demo"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-white border border-slate-200 px-3 py-2 text-[13px] font-medium text-slate-900 no-underline hover:bg-slate-100 transition-colors"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-white border border-slate-200 px-3 py-2.5 text-[13px] font-medium text-slate-900 no-underline hover:bg-slate-100 transition-colors"
                 >
                   <BarChart3 className="w-3.5 h-3.5" />
                   Sample dashboard
                 </Link>
                 <a
                   href="#signup"
-                  className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-md bg-slate-900 px-3 py-2 text-[13px] font-medium text-white no-underline hover:bg-slate-800 transition-colors"
+                  className="mt-2.5 inline-flex w-full items-center justify-center gap-2 rounded-md bg-slate-900 px-3 py-2.5 text-[13px] font-medium text-white no-underline hover:bg-slate-800 transition-colors"
                 >
                   Get early access
                   <ArrowRight className="w-3.5 h-3.5" />
